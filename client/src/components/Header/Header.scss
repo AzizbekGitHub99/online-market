@@ -1,0 +1,156 @@
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    .header_nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 15px 0;
+        .logo-site{
+            cursor: pointer;
+        }
+        .burger_menu{
+            position: relative;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            font-size: 20px;
+        }
+        .header_list{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 30px;
+        }
+        .options{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+                padding: 10px 15px;
+                border-radius: 10px;
+            }
+            .register-btn{
+                padding: 10px 15px;
+                border-radius: 10px;
+            }
+        }
+    
+        .lang{
+            gap: 10px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: transform .6s ease;
+            .lang-img{
+                border-radius: 5px;
+                padding: 5px;
+            }
+            img{
+                height: 20px;
+                width: 30px;
+                object-fit: cover;
+            }
+        }    
+        .box-lang{
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            border-radius: 10px;
+            position: fixed;
+            border: 2px solid var(--text-color);
+            top: 70px;
+            overflow: hidden;
+            .lang{
+                width: 100%;
+                padding: 5px 15px;
+                &:not(:nth-child(4)) {
+                    border-bottom: 1px solid var(--text-color);
+                }
+                &:hover{
+                    background-color: var(--btn-color);
+                }
+            }
+        }
+        #checkbox {
+            display: none;
+          }
+    }
+    @media (max-width: 1160px){
+        .burger_menu{
+            display: flex !important;
+        }
+        .options {
+            position: absolute;
+            padding: 10px;
+            top: 60px;
+            right: -300px;
+            width: 300px;
+            opacity: 0;
+            background-color: var(--bg-color);
+            transition: right 0.3s ease, opacity 0.3s ease;
+        }
+        .options.open, .header_list.open {
+            right: 0;
+            opacity: 1;
+        }
+    }
+    @media (max-width: 985px){
+        .mobile{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .options{
+            padding: 0;
+            position: static;
+            opacity: 1;
+            width: auto;
+        }
+        .header_list {
+            background-color: var(--bg-color);
+            flex-direction: column;
+            position: absolute;
+            padding: 20px 0;
+            top: 60px;
+            right: -300px;
+            width: 300px;
+            opacity: 0;
+            transition: right 0.3s ease, opacity 0.3s ease;
+        }
+    }
+    @media (max-width: 450px){
+
+        .mobile{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .header_list, .options {
+            padding: 20px 0;
+            background-color: var(--bg-color);
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: -300px;
+            width: 100%;
+            opacity: 0;
+            transition: right 0.3s ease, opacity 0.3s ease;
+        }
+        .options{
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+        }   
+        .header_list{
+            top: 130px;
+        }
+    }
+}

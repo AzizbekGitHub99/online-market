@@ -1,0 +1,69 @@
+.user_profile{
+    padding: 70px 0;
+    .profile_pic{
+        position: relative;
+        width: 180px;
+        height: 200px;
+        padding: 16px 20px;
+        border-radius: 20px;
+        border: 1px solid white;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        label{
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            width: 30px;
+            height: 40px;
+        }
+        input{
+            display: none;
+        }
+    }
+    input{
+        border: none;
+        outline: none;
+        width: 100%;
+        background: transparent;
+        color: var(--input-color);
+    }
+    
+    button, label, textarea {
+        padding: 16px 20px;
+        border-radius: 20px;
+        border: 1px solid white;
+    }
+    label {
+        position: relative;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 24px;
+        .error-text{
+            position: absolute;
+            bottom: -17px;
+            font-size: 12px;
+        }
+    }
+    form{
+        padding: 20px 0;
+    }
+    
+    
+    label, textarea {
+        margin-right: 8px;
+        box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+        width: 100%;
+        box-sizing: border-box;
+        transition: all 0.2s ease-in-out;
+        appearance: none;
+        -webkit-appearance: none;
+        color: red;
+    }
+    label:focus {
+        box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+    }
+}

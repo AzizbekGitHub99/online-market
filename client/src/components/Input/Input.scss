@@ -1,0 +1,60 @@
+.textarea-word{
+    position: relative;
+    margin-top: 25px;
+    span{
+        position: absolute;
+        top: -12px;
+        left: 12px;
+        padding: 5px 10px;
+        font-size: 12px;
+        background-color: white;
+        margin-bottom: -100px;
+        border-radius: 5px;
+        color: gray;
+        z-index: 2;
+        border: 1px solid #D6D6D6
+    }
+    textarea{
+        width: 100%;
+        resize: none;
+        outline: none;
+        border-radius: 10px;
+        padding: 15px;
+        border: 1px solid #D6D6D6;
+        font-family: sans-serif;
+        letter-spacing: 1px;
+        font-size: 16px;
+    }
+    textarea:disabled{
+        border-color: #D6D6D6;
+        cursor: no-drop;
+        &::placeholder{
+            color: #D6D6D6;
+        }
+    }
+    .count{
+        position: absolute;
+        bottom: 30px;
+        right: 10px;
+        color: black;
+    }
+    .fill{
+        color: red;
+    }
+    textarea.invalid {
+      border-color: red;
+      color: red;
+    }
+    
+    .error-message {
+        position: absolute;
+        color: red;
+        font-size: 12px;
+        margin: 3px 5px;
+        transition: all .7s ease;
+        &:hover{
+            height: auto;
+        }
+    }
+    
+}
