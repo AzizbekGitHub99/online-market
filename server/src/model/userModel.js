@@ -2,32 +2,27 @@ const mongoose = require('mongoose');
 
 
 const userSchema = new mongoose.Schema({
-    google_id:{
-        type: String,
-    },
     firstname: {
         type: String,
     },
     lastname: {
         type: String,
     },
-    email: {
+    phoneNumber: {
         type: String,
+        required: true
     },
     password: {
         type: String,
+        required: true
     },
     role: {
         type: String,
         default: 'user',
         enum: ['user', 'admin', 'superadmin'],
     },
-    phoneNumber: {
-        type: String,
-        default: null
-    },
     profilePicture: {
-        type: Object || String,
+        type: Object,
         default: null,
     },
 },

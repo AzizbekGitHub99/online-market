@@ -6,16 +6,22 @@ import { BsMoonStars } from 'react-icons/bs'
 import { RiLogoutBoxLine, RiLogoutBoxRLine } from 'react-icons/ri'
 import { CiLight } from 'react-icons/ci'
 import { AiOutlineMenuFold, AiOutlineMenuUnfold } from 'react-icons/ai'
+import Menu from '../Menu/Menu'
 
 const Header = () => {
     const {handleLanguageChange, theme, toggleTheme, userId, exit} = useInfoContext()
     const [openlang, setOpenlang] = useState(false);
     const [showBurger, setShowBurger] = useState(false);
+    const [showMenu, setShowMenu] = useState(false);
     const toggleBurger = () => setShowBurger(!showBurger)
     const toggle = () => setOpenlang(!openlang);
+    const toggleMenu = () => setShowMenu(!showMenu);
   return (
     <header>
         <div className="container">
+          <div className="home_header">
+
+          </div>
             <nav className='header_nav'>
                 <div className="logo-site">
                   Online
@@ -37,6 +43,7 @@ const Header = () => {
                         <NavLink to='/'>Do‘konlar</NavLink>
                     </li>
                     <li>
+                      <button onClick={toggleMenu}>Open</button>
                     </li>
                 </ul>
                 <div className='mobile'>
@@ -79,6 +86,15 @@ const Header = () => {
                 </div>
             </nav>
         </div>
+        <Menu title={'Test header'} open={showMenu} setOpen={setShowMenu}>
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+          </ul>           
+        </Menu>
     </header>
   )
 }

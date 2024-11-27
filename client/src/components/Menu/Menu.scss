@@ -1,0 +1,42 @@
+.menu_left {
+    position: fixed;
+    top: 0;
+    right: -100%; // Initially hidden off the right side
+    width: 500px; // Adjust width as needed
+    height: 100vh; // Full height of the viewport
+    background-color: #f8f9fa; // Background color
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); // Optional shadow for depth
+    transition: right 0.3s ease; // Smooth transition effect
+    z-index: 1000; // Ensure it's above other elements
+  
+    &.open {
+      right: 0; // Slide into view
+    }
+  
+    .menu_head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background-color: #343a40; // Header background color
+      color: #fff;
+  
+      h3 {
+        margin: 0;
+      }
+  
+      .close_menu {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+    }
+  
+    .menu_child {
+      padding: 1rem;
+      overflow-y: auto; // If content is long, allow scrolling
+    }
+  }
+  
