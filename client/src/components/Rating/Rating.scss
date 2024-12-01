@@ -1,0 +1,14 @@
+.rating{
+    display: flex;
+    gap: 6px;
+    &__left{
+        display: flex;
+        gap: 6px;
+    }
+    &__right{
+        display: flex;
+        gap: 6px;
+        font-size: 14px;
+        color: var(--secondary-text-color);
+    }
+}

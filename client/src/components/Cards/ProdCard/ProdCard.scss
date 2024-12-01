@@ -1,0 +1,99 @@
+.prod-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 290px;
+  height: 540px;
+  &__head {
+    position: relative;
+    height: 290px;
+    .stickers{
+        top: 20px;
+        left: 0;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        li{
+            height: 30px;
+            padding: 0 20px;
+            border-radius: 0 15px 15px 0;
+            line-height: 30px;
+            width: fit-content;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .top{
+            background-color: var(--secondary-color);
+    
+        }
+        .discount{
+            background-color: var(--main-color);
+    
+        }
+    }
+    img {
+      border-radius: 2px 2px 0 0;
+    }
+    svg {
+      position: absolute;
+      top: 20px;
+      right: -18px;
+      opacity: 0;
+      transition: all linear .3s;
+      cursor: pointer;
+    }
+  }
+  &__body {
+    padding: 10px 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    &__title {
+      transition: all linear 0.3s;
+      font-size: 16px;
+      font-weight: 600;
+      width: 100%;
+      color: var(--primary-text-color);
+    }
+    &__description {
+      width: 100%;
+      color: var(--secondary-text-color);
+    }
+    &__price {
+      color: var(--primary-text-color);
+    }
+  }
+  &__foot {
+    padding: 20px;
+    margin-top: auto;
+    button {
+      width: 100%;
+      font-size: 14px;
+      border: 1px solid #3a3a3a;
+      border-radius: 4px;
+      box-shadow: none;
+      color: #3a3a3a;
+      font-weight: 500;
+      padding: 10px 0;
+      text-shadow: none;
+      transition: all linear 0.3s;
+      &:hover {
+        color: white;
+        background-color: #3a3a3a;
+      }
+    }
+  }
+  &:hover {
+    .prod-card__body {
+      &__title {
+        color: var(--primary-hover-text-color);
+      }
+    }
+    .prod-card__head {
+      svg {
+        opacity: 1;
+        right: 23px;
+      }
+    }
+  }
+}

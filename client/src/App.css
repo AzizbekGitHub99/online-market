@@ -1,6 +1,10 @@
 :root {
-  --bg-color: #ebecf0;
-  --text-color: #babecc;
+  --main-color: #F5A3B7;
+  --secondary-color: #B0A6BD;
+  --bg-color: #fff;
+  --primary-text-color: #383533;
+  --primary-hover-text-color: #F5A3B7;
+  --secondary-text-color: #697586;
   --input-color: black;
 }
 
@@ -16,6 +20,7 @@
   box-sizing: border-box;
   font-family: sans-serif;
   scrollbar-width: none;
+  transition: all linear .3s;
   /* user-select: none; */
 }
 
@@ -79,7 +84,7 @@ button:disabled {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1216px;
   padding: 0 100px;
   margin: 0 auto;
 }
